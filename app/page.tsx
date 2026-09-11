@@ -63,6 +63,7 @@ export default function Home() {
           <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             <a href="#how" className="hover:text-white">How it works</a>
             <a href="#screenshots" className="hover:text-white">Screenshots</a>
+            <Link href="/tools/water-eject-sound" className="hover:text-white">Free tones</Link>
             <a href="#guides" className="hover:text-white">Guides</a>
             <a href="#faq" className="hover:text-white">FAQ</a>
           </div>
@@ -237,6 +238,12 @@ export default function Home() {
           </div>
 
           <ToneDemo />
+          <p className="mt-4 text-center text-sm text-slate-400">
+            On a laptop right now? Play the full 60-second{" "}
+            <Link href="/tools/water-eject-sound" className="font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200">
+              free 165Hz + 300Hz eject tones in your browser →
+            </Link>
+          </p>
         </div>
       </section>
 
@@ -379,6 +386,7 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-widest text-slate-300">App</p>
             <ul className="mt-3 space-y-2 text-sm text-slate-400">
               <li><a href={APP_STORE_URL} target="_blank" rel="noopener" className="hover:text-cyan-300">Download on App Store</a></li>
+              <li><Link href="/tools/water-eject-sound" className="hover:text-cyan-300">Free eject tones (play online)</Link></li>
               <li><a href="https://sites.google.com/view/water-clearance/privacy-policy" target="_blank" rel="noopener" className="hover:text-cyan-300">Privacy Policy</a></li>
               <li><a href="https://sites.google.com/view/water-clearance/terms-conditions" target="_blank" rel="noopener" className="hover:text-cyan-300">Terms of Use</a></li>
               <li><Link href={SITE_URL} className="hover:text-cyan-300">Home</Link></li>

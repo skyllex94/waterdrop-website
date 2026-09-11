@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { APP_STORE_URL, GUIDES, SITE_URL } from "@/lib/site";
 import { GUIDE_CONTENT } from "@/lib/guides-content";
 import ReadingProgress from "@/components/ReadingProgress";
+import AppleMark from "@/components/AppleMark";
 
 const GUIDE_UPDATED = "2026-09-11";
 
@@ -130,8 +131,8 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           <p className="flex-1 text-sm leading-6 text-slate-300">
             <strong className="text-white">TL;DR:</strong> {g.intro[0]}
           </p>
-          <a href={APP_STORE_URL} target="_blank" rel="noopener" className="rounded-xl bg-white px-5 py-3 text-sm font-bold text-black hover:-translate-y-0.5">
-             Get the app
+          <a href={APP_STORE_URL} target="_blank" rel="noopener" className="inline-flex items-center gap-2 rounded-xl bg-white px-5 py-3 text-sm font-bold text-black hover:-translate-y-0.5">
+            <AppleMark size={18} /> Get the app
           </a>
         </div>
 
@@ -172,7 +173,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
             Water eject + dust cleaning + AirPods &amp; earpiece modes + free dB meter and 15+ tests. 4.3★ rated.
           </p>
           <a href={APP_STORE_URL} target="_blank" rel="noopener" className="mt-5 inline-flex items-center gap-2 rounded-2xl bg-white px-7 py-4 font-bold text-black hover:-translate-y-0.5">
-             Download on the App Store
+            <AppleMark size={22} /> Download on the App Store
           </a>
           <p className="mt-3 text-xs text-slate-500">Free · iOS 15.1+ · No data collected</p>
         </div>
