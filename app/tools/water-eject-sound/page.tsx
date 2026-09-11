@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FrequencyPlayer from "@/components/FrequencyPlayer";
 import AppleMark from "@/components/AppleMark";
+import SiteHeader from "@/components/SiteHeader";
 import { APP_STORE_URL, GUIDES, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -67,20 +68,13 @@ export default function WaterEjectSoundPage() {
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-deep/85 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/assets/icon.jpg" alt="WaterDrop app icon" width={36} height={36} className="rounded-xl" />
-            <span className="font-extrabold">Water<span className="text-gradient">Drop</span></span>
-          </Link>
-          <div className="flex items-center gap-3">
-            <Link href="/#guides" className="hidden text-sm text-slate-300 hover:text-white sm:block">All guides</Link>
-            <a href={APP_STORE_URL} target="_blank" rel="noopener" className="rounded-xl bg-cyan-400 px-4 py-2 text-sm font-bold text-deep hover:bg-cyan-300">
-              Get the app
-            </a>
-          </div>
-        </nav>
-      </header>
+      <SiteHeader
+        links={[
+          { href: "/#guides", label: "All guides" },
+          { href: "/guides/how-to-get-water-out-of-airpods", label: "AirPods fix" },
+          { href: "/guides/how-to-get-water-out-of-iphone-speaker", label: "iPhone fix" },
+        ]}
+      />
 
       <article className="mx-auto max-w-3xl px-4 pb-20 pt-10">
         <nav className="text-xs text-slate-400" aria-label="Breadcrumb">

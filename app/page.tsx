@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { APP_STORE_URL, FAQS, GUIDES, SITE_URL } from "@/lib/site";
 import ToneDemo from "@/components/ToneDemo";
+import SiteHeader from "@/components/SiteHeader";
 
 function Stars() {
   return (
@@ -19,7 +20,7 @@ function AppStoreButton({ large = false }: { large?: boolean }) {
       href={APP_STORE_URL}
       target="_blank"
       rel="noopener"
-      className={`group inline-flex items-center gap-3 rounded-2xl bg-white text-black font-semibold shadow-glow transition hover:-translate-y-0.5 hover:shadow-card ${
+      className={`group inline-flex items-center justify-center gap-3 rounded-2xl bg-white text-black font-semibold shadow-glow transition hover:-translate-y-0.5 hover:shadow-card ${
         large ? "px-7 py-4 text-lg" : "px-5 py-3 text-base"
       }`}
     >
@@ -52,31 +53,15 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       {/* ── NAV ─────────────────────────────── */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-deep/85 backdrop-blur-xl">
-        <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <Link href="/" className="flex items-center gap-2.5">
-            <Image src="/assets/icon.jpg" alt="WaterDrop app icon" width={40} height={40} className="rounded-xl shadow-glow" />
-            <span className="text-lg font-extrabold tracking-tight">
-              Water<span className="text-gradient">Drop</span>
-            </span>
-          </Link>
-          <div className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#how" className="hover:text-white">How it works</a>
-            <a href="#screenshots" className="hover:text-white">Screenshots</a>
-            <Link href="/tools/water-eject-sound" className="hover:text-white">Free tones</Link>
-            <a href="#guides" className="hover:text-white">Guides</a>
-            <a href="#faq" className="hover:text-white">FAQ</a>
-          </div>
-          <a
-            href={APP_STORE_URL}
-            target="_blank"
-            rel="noopener"
-            className="rounded-xl bg-cyan-400 px-4 py-2 text-sm font-bold text-deep transition hover:bg-cyan-300"
-          >
-            Get the app
-          </a>
-        </nav>
-      </header>
+      <SiteHeader
+        links={[
+          { href: "#how", label: "How it works" },
+          { href: "#screenshots", label: "Screenshots" },
+          { href: "/tools/water-eject-sound", label: "Free tones" },
+          { href: "#guides", label: "Guides" },
+          { href: "#faq", label: "FAQ" },
+        ]}
+      />
 
       {/* ── HERO ────────────────────────────── */}
       <section className="hero-grid relative overflow-hidden">
@@ -97,9 +82,9 @@ export default function Home() {
               that shake trapped water and dust loose from the speaker mesh, so your clear
               sound comes back. Your first run is free, and it takes about a minute.
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
               <AppStoreButton large />
-              <a href="#how" className="rounded-2xl border border-white/20 px-6 py-4 font-semibold text-white transition hover:border-cyan-400/60 hover:text-cyan-200">
+              <a href="#how" className="rounded-2xl border border-white/20 px-6 py-4 text-center font-semibold text-white transition hover:border-cyan-400/60 hover:text-cyan-200">
                 See how it works ↓
               </a>
             </div>
@@ -116,7 +101,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="relative mx-auto grid w-full max-w-md grid-cols-3 gap-3">
+          <div className="relative mx-auto grid w-full max-w-md grid-cols-3 gap-2 sm:gap-3">
             {["/assets/screenshot-1.png", "/assets/screenshot-2.png", "/assets/screenshot-3.png"].map((s, i) => (
               <div
                 key={s}
