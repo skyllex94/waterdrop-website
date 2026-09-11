@@ -1,0 +1,10 @@
+# Netlify build settings for the WaterDrop Next.js site.
+# When you connect this repo, Netlify auto-detects Next.js and applies the
+# Next.js Runtime — these settings just make the build explicit and pin Node.
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
