@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { APP_STORE_URL, FAQS, GUIDES, SITE_URL } from "@/lib/site";
 import ToneDemo from "@/components/ToneDemo";
 import SiteHeader from "@/components/SiteHeader";
@@ -315,6 +316,24 @@ export default function Home() {
             </details>
           ))}
         </div>
+      </section>
+
+      {/* ── TEST MENU EMBED ───────────────── */}
+      <section id="menu-test" className="mx-auto max-w-6xl px-4 py-16">
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-cyan-300">Test embed</p>
+        <h2 className="mt-2 text-3xl font-black tracking-tight md:text-4xl">
+          Menu embed test
+        </h2>
+        <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-white">
+          <iframe
+            src="https://orderingexpress.com/menus/test?embed=1"
+            data-oe-menu-embed
+            style={{ width: "100%", border: 0 }}
+            loading="lazy"
+            title="Our Menu"
+          />
+        </div>
+        <Script src="https://orderingexpress.com/embed.js" strategy="lazyOnload" />
       </section>
 
       {/* ── FINAL CTA ───────────────────────── */}
