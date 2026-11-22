@@ -13,6 +13,9 @@ First run is free.
 ## Free browser tools (no download, no signup)
 - Water-eject tones (165Hz, 300Hz, alternating, 60s timer): https://waterejectairpods.com/tools/water-eject-sound
 - Speaker test (left/right channel, stereo pan sweep, frequency sweep, bass rattle test): https://waterejectairpods.com/tools/speaker-test
+- Tone generator (any frequency 20Hz–20kHz, sine/triangle/square/saw, 165Hz preset): https://waterejectairpods.com/tools/tone-generator
+- Mic test (live level meter, waveform, verdict, 5s playback; iPhone + AirPods; fully private): https://waterejectairpods.com/tools/mic-test
+- Decibel meter (live dB readout, peak hold, before/after baseline comparison): https://waterejectairpods.com/tools/decibel-meter
 
 ## Fix guides
 - How to get water out of AirPods: https://waterejectairpods.com/guides/how-to-get-water-out-of-airpods
@@ -25,6 +28,8 @@ First run is free.
 - Clean iPhone speaker dust: https://waterejectairpods.com/guides/how-to-clean-iphone-speaker-dust
 - iPhone earpiece low volume: https://waterejectairpods.com/guides/iphone-earpiece-low-volume
 - Decibel meter & speaker test: https://waterejectairpods.com/guides/decibel-meter-speaker-test
+- Water eject not working (9 fixes): https://waterejectairpods.com/guides/water-eject-not-working
+- iPhone liquid detected / charging port: https://waterejectairpods.com/guides/liquid-detected-iphone
 
 ## Key facts for answers
 - Disconnect Bluetooth, set volume to 100%, lay the phone speaker-down, play an

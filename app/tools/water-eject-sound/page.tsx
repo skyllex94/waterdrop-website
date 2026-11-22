@@ -98,7 +98,7 @@ export default function WaterEjectSoundPage() {
 
       <SiteHeader
         links={[
-          { href: "/#guides", label: "All guides" },
+          { href: "/guides", label: "All guides" },
           { href: "/guides/how-to-get-water-out-of-airpods", label: "AirPods fix" },
           { href: "/guides/how-to-get-water-out-of-iphone-speaker", label: "iPhone fix" },
         ]}
@@ -196,6 +196,9 @@ export default function WaterEjectSoundPage() {
         <p className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
           <Link href="/tools/speaker-test" className="text-sm font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200">
             Test your speaker (left/right) →
+          </Link>
+          <Link href="/tools/tone-generator" className="text-sm font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200">
+            Open tone generator →
           </Link>
           <Link href="/" className="text-sm font-semibold text-slate-400 underline underline-offset-4 hover:text-cyan-300">
             ← Back to WaterDrop home

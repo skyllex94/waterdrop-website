@@ -75,7 +75,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE_URL}/#guides` },
+      { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE_URL}/guides` },
       { "@type": "ListItem", position: 3, name: g.shortTitle, item: `${SITE_URL}/guides/${g.slug}` },
     ],
   };
@@ -90,7 +90,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
 
       <SiteHeader
         links={[
-          { href: "/#guides", label: "All guides" },
+          { href: "/guides", label: "All guides" },
           { href: "/tools/water-eject-sound", label: "Free tones" },
           { href: "/guides/how-to-get-water-out-of-airpods", label: "AirPods fix" },
           { href: "/guides/how-to-get-water-out-of-iphone-speaker", label: "iPhone fix" },
@@ -100,7 +100,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       <article className="mx-auto max-w-3xl px-4 pb-20 pt-10">
         <nav className="text-xs text-slate-400">
           <Link href="/" className="hover:text-cyan-300">Home</Link> <span className="mx-1">/</span>
-          <Link href="/#guides" className="hover:text-cyan-300">Guides</Link> <span className="mx-1">/</span>
+          <Link href="/guides" className="hover:text-cyan-300">Guides</Link> <span className="mx-1">/</span>
           <span className="text-slate-200">{g.shortTitle}</span>
         </nav>
         <p className="mt-4 text-xs text-slate-500">
@@ -161,18 +161,36 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           </ul>
         </div>
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <Link href="/tools/water-eject-sound" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
             <div className="text-2xl">🔊</div>
-            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free water-eject tones — play in your browser</p>
-            <p className="mt-1 text-xs leading-5 text-slate-400">165Hz, 300Hz or alternating with a 60-second timer. No download.</p>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free water-eject tones</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">165Hz, 300Hz or alternating. No download.</p>
             <p className="mt-2 text-xs font-semibold text-cyan-300">Play tones →</p>
           </Link>
           <Link href="/tools/speaker-test" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
             <div className="text-2xl">🎧</div>
-            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free speaker test — left/right, bass &amp; frequency</p>
-            <p className="mt-1 text-xs leading-5 text-slate-400">Check each channel before and after ejecting water.</p>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free speaker test</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">Left/right, bass &amp; frequency check.</p>
             <p className="mt-2 text-xs font-semibold text-cyan-300">Test speaker →</p>
+          </Link>
+          <Link href="/tools/tone-generator" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
+            <div className="text-2xl">🎛️</div>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free tone generator</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">Play any frequency 20Hz–20kHz.</p>
+            <p className="mt-2 text-xs font-semibold text-cyan-300">Generate tones →</p>
+          </Link>
+          <Link href="/tools/mic-test" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
+            <div className="text-2xl">🎤</div>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free mic test</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">Live level, verdict + playback.</p>
+            <p className="mt-2 text-xs font-semibold text-cyan-300">Test mic →</p>
+          </Link>
+          <Link href="/tools/decibel-meter" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
+            <div className="text-2xl">📊</div>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free decibel meter</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">Before/after proof in dB.</p>
+            <p className="mt-2 text-xs font-semibold text-cyan-300">Measure loudness →</p>
           </Link>
         </div>
 

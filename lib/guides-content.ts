@@ -425,4 +425,101 @@ export const GUIDE_CONTENT: Record<string, GuideFull> = {
       { heading: "Beyond water: use tests as early warning", body: ["Run the battery monthly. Slowly falling treble dB = dust building up — clean before it becomes 'suddenly quiet'. Catching it early is a 60-second job; late-stage impaction takes multiple sessions."] },
     ],
   },
+
+  "water-eject-not-working": {
+    slug: "water-eject-not-working",
+    title: "Water Eject Not Working? 9 Fixes That Actually Work (2026)",
+    shortTitle: "Water eject not working",
+    description:
+      "Water eject shortcut, Siri, or app doing nothing? The 9 real reasons it fails — Bluetooth hijack, volume, silent mode — and how to fix each in order.",
+    keyword: "water eject not working",
+    readMinutes: 7,
+    emoji: "🔧",
+    intro: [
+      "You ran a water eject — shortcut, Siri, website, or app — and nothing happened. No vibration, no improvement, or no sound at all. Before you conclude water eject is a myth: in almost every case the tone never actually reached the speaker correctly. The method is proven (Apple Watch uses the same physics, and independent teardowns show water visibly leaving the grille) — the setup is what fails.",
+      "Work through these 9 fixes in order. Each takes under a minute, and most people find their problem by step 3. Test after every step: play the same song at the same volume and listen for change, or run a quick left/right speaker test to check objectively.",
+    ],
+    steps: [
+      { title: "Fix 1: Bluetooth stole the sound (most common)", detail: "If AirPods, a car, a watch, or a Bluetooth speaker is connected, the tone plays THERE — not from the phone speaker. Go to Settings > Bluetooth and disconnect everything, or toggle Bluetooth off entirely. Re-run the eject. This alone fixes the majority of 'not working' reports." },
+      { title: "Fix 2: Volume isn't actually at max", detail: "Ejection needs full diaphragm movement, which needs full volume. Press volume-up until the on-screen slider is maxed — some shortcuts set 100% themselves, but websites can't. If you use the side buttons, confirm in Control Center that media volume (not ringer) is maxed." },
+      { title: "Fix 3: Silent switch is on (browser tools)", detail: "On iPhone, the silent switch can mute web audio. If you're using a website tone and hear nothing, flip the silent switch OFF and try again. Apps and shortcuts are usually unaffected, which is one reason they fail less often." },
+      { title: "Fix 4: You're ejecting the wrong speaker", detail: "iPhones have two speakers: bottom grille + earpiece. If music sounds fine but calls are muffled, the bottom-speaker tone won't help — you need the earpiece program. Conversely, a tone playing only through the earpiece won't fix a muffled loudspeaker. Match the mode to the symptom." },
+      { title: "Fix 5: The shortcut itself is broken", detail: "Shared Water Eject shortcuts break across iOS updates and vary wildly in quality. Open the Shortcuts app, tap the shortcut's ••• and read its actions: it should set volume to 100% and play a low tone — anything asking for contacts, location, or URLs is a red flag. Re-download from a known source (RoutineHub, ShortcutsGallery), or skip shortcuts entirely and use a browser tool or app." },
+      { title: "Fix 6: Siri won't run it", detail: "'Hey Siri, water eject' fails when Siri mishears the shortcut name, the shortcut isn't synced, or Siri can't run it from a locked phone. Rename the shortcut to something unmistakable ('Eject Water Now'), run it once manually from the Shortcuts app, and allow 'Allow When Locked' in the shortcut's settings." },
+      { title: "Fix 7: The case is eating the vibration", detail: "Thick, waterproof, or loose cases dampen the exact vibration that does the work — and a rattling case fakes 'distortion' that isn't the speaker. Pop the case off, re-run, and compare. If the 'damage' disappears, it was the case all along." },
+      { title: "Fix 8: It's dust or residue, not water", detail: "Ejection moves loose water brilliantly and packed lint barely at all. If sound faded gradually over months (no splash), or pool/salt water dried in the mesh, run a dust-cleaning cycle instead: alternating high-frequency sweeps with the grille down, plus a soft dry brush. Mineral crust sometimes needs 2–3 sessions across days." },
+      { title: "Fix 9: Accept it might be hardware", detail: "Stop and get service if: no sound at all (check mute + Bluetooth + balance first), distortion at LOW volume that never changes, rattling after a drop, or zero improvement after proper ejection plus full drying. Sound can't fix a torn driver, corroded pins, or a dead amp — more cycles just waste your time." },
+    ],
+    waterdrop: [
+      { title: "The app sidesteps most of these failures", detail: "WaterDrop's guided routine checks output routing, uses per-speaker programs (main, earpiece, AirPods), and runs alternating frequencies with vibration — no shortcut maintenance, no silent-switch surprises." },
+      { title: "Prove each fix with tests, not hope", detail: "After every fix above, run the same 1kHz tone and a left/right check. The free dB meter shows whether anything actually changed — the number doesn't lie about a Bluetooth hijack." },
+      { title: "When to stop troubleshooting", detail: "If proper ejection at max volume, correct speaker, no case, plus overnight drying changes nothing, the app will tell you it's likely hardware. That's a useful answer too — it saves you days of retrying." },
+    ],
+    tips: [
+      "Always test with the SAME song at the SAME volume — memory lies about 'slightly better'.",
+      "Disconnect Bluetooth before every session, not just the first — phones reconnect silently.",
+      "One quiet side? Check Settings > Accessibility > Audio Balance before blaming water.",
+      "Re-download shared shortcuts after major iOS updates — they rot.",
+      "Film the grille in slow-mo during ejection: seeing droplets (or not) tells you instantly whether sound is reaching the mesh.",
+    ],
+    faqs: [
+      { q: "Why is my water eject not working?", a: "Almost always a routing problem: Bluetooth sent the tone to earbuds/car instead of the phone speaker, volume wasn't maxed, or silent mode muted a browser tool. Disconnect Bluetooth, max the volume, flip silent off, and re-run — that resolves most cases." },
+      { q: "Why is Siri water eject not working?", a: "Siri fails on shortcut names it mishears or shortcuts not synced to the device. Rename it to something distinct, run it once manually from Shortcuts, and enable 'Allow When Locked'. If Siri still refuses, run the tone directly — the sound is what matters, not the voice trigger." },
+      { q: "Why is the water eject shortcut not showing up?", a: "Either it didn't install (tap Get Shortcut in Safari, then Add Shortcut), it's in a Shortcuts folder, or an iOS update disabled untrusted shortcuts — check Settings > Shortcuts > Allow Untrusted Shortcuts. Re-adding from the source page usually restores it." },
+      { q: "No sound plays at all during water eject — what's wrong?", a: "No sound = no output path, not a tone problem. Check silent switch (browser tools), Bluetooth connections, volume slider, and that the app/shortcut has no mute toggle of its own. If music apps also produce nothing, it's a system audio issue — restart the phone." },
+      { q: "Water eject works on my earpiece but not the speaker?", a: "Those are separate drivers needing separate programs. A shortcut that only targets the main speaker won't fix call muffling and vice versa. Use an earpiece-specific mode for calls, main-speaker mode for music — or an app with both." },
+    ],
+    sections: [
+      { heading: "The 60-second diagnosis that saves an hour", body: ["Play any song. Loudspeaker muffled but earpiece calls fine? Bottom speaker problem. Calls muffled but music fine? Earpiece problem. Both fine but a shortcut 'does nothing'? Output routing problem — the tone went somewhere else. Both bad after a dunk plus drying? Run proper ejection (this guide's steps 1–4) before concluding anything. This two-minute split tells you which of the 9 fixes to start with."] },
+      { heading: "Shortcut vs. website vs. app: failure modes compared", body: ["Shortcuts fail from link rot, iOS updates, and permission confusion — powerful when maintained, fragile when not. Websites fail from silent-switch muting and tab throttling, but need no install and never ask for your contacts. Apps fail least (guided routing, no silent-switch issue) but live behind a download. Pick the one you'll actually maintain: for most people that's a bookmarked browser tool plus the app for real emergencies."] },
+    ],
+  },
+
+  "liquid-detected-iphone": {
+    slug: "liquid-detected-iphone",
+    title: "iPhone Liquid Detected? What to Do + How Long to Dry (2026)",
+    shortTitle: "Liquid detected alert",
+    description:
+      "iPhone says liquid detected in the Lightning or USB-C port? Exact drying timetable, emergency override risks, wireless charging path, and the dry-but-still-alert fix.",
+    keyword: "liquid detected iphone",
+    readMinutes: 7,
+    emoji: "🔌",
+    intro: [
+      "You plug in your iPhone and instead of charging you get 'Liquid Detected in Lightning/USB-C Connector' — and charging is now blocked. Don't panic, and don't force it: that block exists because electricity plus wet pins corrodes the connector into permanent damage. The alert is your phone protecting itself.",
+      "Here's the exact protocol: what the different alerts mean, the drying timetable Apple actually specifies (30 minutes vs. 5 hours vs. 24 hours), how to charge in the meantime, when Emergency Override is and isn't safe — and what to do when the port looks bone dry but the warning won't go away.",
+    ],
+    steps: [
+      { title: "Unplug everything, read the exact alert (now)", detail: "Disconnect the cable from BOTH ends — phone and adapter — because liquid on either end triggers it. Note the exact wording: 'Liquid Detected in Lightning Connector' vs 'USB-C', vs the emergency-override screen. Different alerts, slightly different rules. Do not keep retrying the cable every few minutes." },
+      { title: "Tap and position (2 minutes)", detail: "Hold the iPhone with the connector facing DOWN and tap it gently against your hand to shake bulk liquid out. Never insert anything — no cotton swabs, toothpicks, or compressed air. Apple explicitly warns all three drive liquid deeper or damage pins." },
+      { title: "Dry with airflow: the real timetable", detail: "Set the phone connector-down in a dry room with airflow (a cool fan nearby helps; never heat). Apple says retry after at least 30 minutes — if the alert returns, keep drying up to 24 hours. Apple's separate water-exposure guidance says allow at least 5 hours before charging a phone that was actually submerged. Use the longer clock if it went swimming." },
+      { title: "Charge wirelessly while you wait", detail: "A dry-backed iPhone can charge on a Qi/MagSafe pad during the whole drying period — the port stays untouched. Wipe the back dry, skip thick cases, and confirm the charging indicator. This is the correct answer to 'but I need my phone tonight', not Emergency Override." },
+      { title: "Isolate cable vs. port (after drying)", detail: "Once everything is dry, test with a different known-good cable. Alert gone? The old cable was the wet/damaged one — retire it. Alert persists across cables? The port has residue or corrosion. Try one more full 24-hour dry; if it still triggers, that's a service visit, not a settings problem." },
+      { title: "Emergency Override: the last resort", detail: "Holding the override (dismissing the alert to force charging) is for genuine emergencies — a call you must make — not for overnight charging. Charging through moisture corrodes pins within hours, and the damage shows up days later as intermittent charging. If you override, unplug the moment you can and give the port the full dry period after." },
+    ],
+    waterdrop: [
+      { title: "What the app can and can't do here", detail: "Honest scope: no sound dries a charging port — ejection tones clear speaker meshes, not connectors. While the port dries, use WaterDrop's speaker eject + sound tests to verify the REST of the phone survived the dunk." },
+      { title: "Verify the speakers survived the same splash", detail: "The water that hit your port likely hit the speaker mesh too. Run the main-speaker program, then a before/after dB check. If speakers are clear and only the port complains, you know exactly which problem remains." },
+      { title: "Mic check matters after submersion", detail: "Mics drink water too. Run the free browser mic test — if callers can't hear you after drying, that's a separate rescue (or service) from the port issue." },
+    ],
+    tips: [
+      "Rice is banned by Apple for this — starch dust in the port causes its own failures. Airflow only.",
+      "Never heat: hair dryers warp seals and bake minerals onto pins.",
+      "Salt/pool water is worse than fresh — rinse isn't possible in a port, so give it the full 24 hours.",
+      "A case that traps moisture around the port turns 30 minutes into all day — dry caseless.",
+      "Write down when the alert started and what the phone touched — Genius Bar staff use the timeline.",
+    ],
+    faqs: [
+      { q: "My iPhone says liquid detected but it's not wet — why?", a: "Four usual causes: condensation (cold-to-warm transitions, bathrooms, sweat), residue from an older splash, a wet or damaged CABLE rather than the phone, or corrosion already formed on the pins. Dry everything 24 hours, then test with a different known-good cable to isolate phone vs. cable." },
+      { q: "How long does it take for liquid detection to go away?", a: "Light splashes: often 30–60 minutes of airflow. Real submersion: up to 24 hours per Apple's guidance, and at least 5 hours before even attempting a cable charge. If the alert persists past 24 dry hours across multiple cables, the port likely needs service." },
+      { q: "Is it safe to use Emergency Override to charge?", a: "Only for genuine emergencies, never as routine charging. Forcing current through wet pins corrodes them — damage that appears days later as flaky charging. Use a wireless charger instead whenever possible; it bypasses the port entirely." },
+      { q: "Can I use a wireless charger when liquid is detected?", a: "Yes — that's Apple's own recommended workaround. Make sure the back of the phone is dry, remove thick or metal cases, and place it correctly on the pad. The port stays electrically disconnected while wireless charging." },
+      { q: "Can I use a hair dryer to dry the charging port?", a: "No. Apple explicitly forbids external heat and compressed air: heat warps water seals and bakes minerals onto pins, air drives liquid deeper. A room-temperature fan blowing past the connector-down phone is the fastest safe method." },
+      { q: "Will liquid detected go away on its own?", a: "Yes, once the connector, cable ends, and accessory are genuinely dry — the sensor re-checks every time you plug in. It won't clear on a timer while moisture remains. Persistent alerts after full drying mean residue, a bad cable, or port damage." },
+    ],
+    sections: [
+      { heading: "Which alert you have and what it means", body: ["'Liquid Detected in Lightning Connector' (iPhone XS–14): liquid in the port or on the cable end; charging blocked until dry. 'Liquid Detected in USB-C Connector' (iPhone 15+): same logic, USB-C port. A second screen offering Emergency Override appears on repeat attempts — that's the force-charge path, not a fix. If the alert appears with a specific accessory but not others, the accessory is the wet one."] },
+      { heading: "What NOT to do (all from Apple's own guidance)", body: ["No rice — starch particles damage the connector. No external heat or compressed air — drives liquid deeper and warps seals. No cotton swabs, toothpicks, or paper towels inside the port — bent pins are permanent. No repeated plug-in testing every five minutes — each attempt risks arcing across wet pins. And no assuming 'it looks dry': the sensor reads under the pins where eyes can't see."] },
+      { heading: "Salt water, pool, and sweat: the residue problem", body: ["Fresh-water splashes evaporate clean. Salt, chlorine, sweat, and sugary drinks leave conductive, corrosive residue after the water itself is gone — which is why 'dry but still alerting' is so common after beach or gym exposure. These cases need the full 24-hour dry plus the cable-isolation test, and corrosion that has already formed won't wash out at home. If a beach-dunked port alerts for days, book service and say 'salt water' upfront — techs triage it differently."] },
+    ],
+  },
 };

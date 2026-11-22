@@ -70,7 +70,7 @@ export default function Home() {
         links={[
           { href: "#how", label: "How it works" },
           { href: "#reviews", label: "Reviews" },
-          { href: "/tools/water-eject-sound", label: "Free tones" },
+          { href: "#screenshots", label: "Screenshots" },
           { href: "#guides", label: "Guides" },
           { href: "#faq", label: "FAQ" },
         ]}
@@ -457,6 +457,9 @@ export default function Home() {
               <li><a href={APP_STORE_URL} target="_blank" rel="noopener" className="hover:text-cyan-300">Download on App Store</a></li>
               <li><Link href="/tools/water-eject-sound" className="hover:text-cyan-300">Free eject tones (play online)</Link></li>
               <li><Link href="/tools/speaker-test" className="hover:text-cyan-300">Free speaker test (left/right)</Link></li>
+              <li><Link href="/tools/tone-generator" className="hover:text-cyan-300">Free tone generator (any Hz)</Link></li>
+              <li><Link href="/tools/mic-test" className="hover:text-cyan-300">Free mic test (private)</Link></li>
+              <li><Link href="/tools/decibel-meter" className="hover:text-cyan-300">Free decibel meter (dB)</Link></li>
               <li><a href="https://sites.google.com/view/water-clearance/privacy-policy" target="_blank" rel="noopener" className="hover:text-cyan-300">Privacy Policy</a></li>
               <li><a href="https://sites.google.com/view/water-clearance/terms-conditions" target="_blank" rel="noopener" className="hover:text-cyan-300">Terms of Use</a></li>
               <li><Link href={SITE_URL} className="hover:text-cyan-300">Home</Link></li>

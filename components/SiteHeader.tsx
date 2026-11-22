@@ -7,13 +7,25 @@ import { APP_STORE_URL } from "@/lib/site";
 
 export type NavLink = { href: string; label: string };
 
+const TOOLS: NavLink[] = [
+  { href: "/tools/water-eject-sound", label: "Water Eject Tones" },
+  { href: "/tools/speaker-test", label: "Speaker Test" },
+  { href: "/tools/tone-generator", label: "Tone Generator" },
+  { href: "/tools/mic-test", label: "Mic Test" },
+  { href: "/tools/decibel-meter", label: "Decibel Meter" },
+];
+
 /** Floating pill header, Swokei-style — centered, rounded, clean. */
 export default function SiteHeader({ links }: { links: NavLink[] }) {
   const [open, setOpen] = useState(false);
+  const [toolsOpen, setToolsOpen] = useState(false);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") setOpen(false);
+      if (e.key === "Escape") {
+        setOpen(false);
+        setToolsOpen(false);
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
@@ -47,6 +59,38 @@ export default function SiteHeader({ links }: { links: NavLink[] }) {
           </Link>
           <div className="hidden items-center gap-5 lg:flex">
             {links.map((l) => renderLink(l, false))}
+            <div
+              className="relative"
+              onMouseEnter={() => setToolsOpen(true)}
+              onMouseLeave={() => setToolsOpen(false)}
+            >
+              <button
+                type="button"
+                aria-expanded={toolsOpen}
+                aria-haspopup="true"
+                onClick={() => setToolsOpen((o) => !o)}
+                className="flex items-center gap-1 rounded-full px-1 py-1 text-[14px] font-medium text-slate-300 transition hover:text-white"
+              >
+                Free tools
+                <span className={`text-[10px] transition-transform ${toolsOpen ? "rotate-180" : ""}`}>▾</span>
+              </button>
+              {toolsOpen && (
+                <div className="absolute right-0 top-full w-60 pt-2">
+                  <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0A1430] p-1.5 shadow-card">
+                    {TOOLS.map((t) => (
+                      <Link
+                        key={t.href}
+                        href={t.href}
+                        onClick={() => setToolsOpen(false)}
+                        className="block rounded-xl px-3.5 py-2.5 text-[14px] font-medium text-slate-200 transition hover:bg-white/5 hover:text-white"
+                      >
+                        {t.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
           <div className="flex shrink-0 items-center gap-2">
             <Link
@@ -81,6 +125,22 @@ export default function SiteHeader({ links }: { links: NavLink[] }) {
           <ul className="space-y-0.5">{links.map((l) => (
             <li key={l.href + l.label}>{renderLink(l, true)}</li>
           ))}</ul>
+          <p className="px-4 pb-1 pt-3 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500">
+            Free tools
+          </p>
+          <ul className="space-y-0.5">
+            {TOOLS.map((t) => (
+              <li key={t.href}>
+                <Link
+                  href={t.href}
+                  onClick={() => setOpen(false)}
+                  className="block rounded-2xl px-4 py-3 text-[15px] font-medium text-slate-200 hover:bg-white/5 hover:text-white"
+                >
+                  {t.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
     </div>

@@ -110,17 +110,37 @@ export const GUIDES: GuideCard[] = [
     readMinutes: 5,
     emoji: "📞",
   },
-  {
-    slug: "decibel-meter-speaker-test",
-    title: "Decibel Meter & Speaker Test: Prove Your Speaker Is Fixed",
-    shortTitle: "Test your speaker",
-    description:
-      "How to use a decibel meter and 15+ sound tests to check before/after speaker cleaning — verify the water eject worked instead of guessing.",
-    keyword: "decibel meter speaker test",
-    readMinutes: 5,
-    emoji: "📊",
-  },
-];
+    {
+      slug: "decibel-meter-speaker-test",
+      title: "Decibel Meter & Speaker Test: Prove Your Speaker Is Fixed",
+      shortTitle: "Test your speaker",
+      description:
+        "How to use a decibel meter and 15+ sound tests to check before/after speaker cleaning — verify the water eject worked instead of guessing.",
+      keyword: "decibel meter speaker test",
+      readMinutes: 5,
+      emoji: "📊",
+    },
+    {
+      slug: "water-eject-not-working",
+      title: "Water Eject Not Working? 9 Fixes That Actually Work (2026)",
+      shortTitle: "Water eject not working",
+      description:
+        "Water eject shortcut, Siri, or app doing nothing? The 9 real reasons it fails — Bluetooth hijack, volume, silent mode — and how to fix each in order.",
+      keyword: "water eject not working",
+      readMinutes: 7,
+      emoji: "🔧",
+    },
+    {
+      slug: "liquid-detected-iphone",
+      title: "iPhone Liquid Detected? What to Do + How Long to Dry (2026)",
+      shortTitle: "Liquid detected alert",
+      description:
+        "iPhone says liquid detected in the Lightning or USB-C port? Exact drying timetable, emergency override risks, wireless charging path, and the dry-but-still-alert fix.",
+      keyword: "liquid detected iphone",
+      readMinutes: 7,
+      emoji: "🔌",
+    },
+  ];
 
 export type Faq = {
   q: string;
