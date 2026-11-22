@@ -66,6 +66,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     downloadUrl: "https://apps.apple.com/us/app/water-eject-airpods-waterdrop/id6449911513",
   };
 
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Zion Studios LLC",
+    url: SITE_URL,
+    logo: `${SITE_URL}/assets/icon.jpg`,
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "WaterDrop — Water Eject & Speaker Cleaner",
+    url: SITE_URL,
+  };
+
   return (
     <html lang="en">
       <head>
@@ -74,6 +89,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
       </head>
       <body>{children}</body>

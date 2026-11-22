@@ -59,6 +59,32 @@ const faqLd = {
   })),
 };
 
+const howToLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "How to eject water from your iPhone speaker with free tones",
+  description:
+    "Play a 165Hz/300Hz ejection tone at max volume with the speaker facing down to shake trapped water out of the mesh.",
+  totalTime: "PT5M",
+  step: [
+    { "@type": "HowToStep", name: "Disconnect Bluetooth", text: "Disconnect Bluetooth so the tone plays through the phone speakers, not your earbuds." },
+    { "@type": "HowToStep", name: "Set volume to 100%", text: "Louder means stronger vibration, which means more water out." },
+    { "@type": "HowToStep", name: "Lay the phone speaker-down", text: "Lay the phone speaker-down on a cloth so gravity helps droplets fall out." },
+    { "@type": "HowToStep", name: "Play alternating 165 ⇄ 300 Hz for 60 seconds", text: "Pick alternating 165 ⇄ 300 Hz and 60 seconds, press play, and watch the grille for droplets." },
+    { "@type": "HowToStep", name: "Wipe and repeat 2–3 times", text: "Wipe the grille and repeat 2–3 times, then test with music." },
+  ],
+};
+
+const breadcrumbLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/water-eject-sound` },
+    { "@type": "ListItem", position: 3, name: "Water eject sounds", item: `${SITE_URL}/tools/water-eject-sound` },
+  ],
+};
+
 export default function WaterEjectSoundPage() {
   const related = GUIDES.filter((g) =>
     ["how-to-get-water-out-of-iphone-speaker", "how-to-get-water-out-of-airpods", "dropped-iphone-in-water-speaker-muffled"].includes(g.slug)
@@ -67,6 +93,8 @@ export default function WaterEjectSoundPage() {
   return (
     <main className="min-h-screen">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
       <SiteHeader
         links={[
@@ -125,7 +153,7 @@ export default function WaterEjectSoundPage() {
           <ul>
             <li><strong>AirPods:</strong> tiny drivers need gentler fine-speaker tuning — a raw 165Hz blast is the wrong tool. Use the app&apos;s AirPods program instead.</li>
             <li><strong>Earpiece:</strong> the call speaker needs its own focused frequency, not the main-speaker tone.</li>
-            <li><strong>Proof:</strong> this page can&apos;t measure anything. The app&apos;s free decibel meter + 15 sound tests show you before-and-after numbers.</li>
+            <li><strong>Proof:</strong> this page can&apos;t measure anything. The app&apos;s free dB meter + 15 sound tests show you before-and-after numbers — or run our <Link href="/tools/speaker-test">free left/right speaker test</Link> to check each channel.</li>
             <li><strong>Hardware damage:</strong> no sound fixes a fried board, a dead mic, or a phone that won&apos;t charge. Tones clear mesh water — that&apos;s it.</li>
           </ul>
         </div>
@@ -165,7 +193,10 @@ export default function WaterEjectSoundPage() {
           ))}
         </div>
 
-        <p className="mt-10 text-center">
+        <p className="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-center">
+          <Link href="/tools/speaker-test" className="text-sm font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200">
+            Test your speaker (left/right) →
+          </Link>
           <Link href="/" className="text-sm font-semibold text-slate-400 underline underline-offset-4 hover:text-cyan-300">
             ← Back to WaterDrop home
           </Link>

@@ -9,20 +9,47 @@ html {
 body {
   @apply bg-deep text-slate-100 antialiased;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "cv11", "ss01";
 }
 
 ::selection {
   background: rgba(34, 211, 238, 0.35);
 }
 
+.hero-clean {
+  background-image:
+    radial-gradient(ellipse 55% 42% at 50% -6%, rgba(34, 211, 238, 0.16), transparent 70%),
+    radial-gradient(ellipse 32% 28% at 88% 12%, rgba(59, 130, 246, 0.12), transparent 70%),
+    radial-gradient(ellipse 32% 28% at 12% 14%, rgba(52, 211, 153, 0.09), transparent 70%);
+}
+
 .hero-grid {
   background-image:
-    radial-gradient(ellipse 60% 50% at 50% -10%, rgba(34, 211, 238, 0.25), transparent),
-    radial-gradient(ellipse 40% 35% at 85% 20%, rgba(59, 130, 246, 0.22), transparent),
-    radial-gradient(ellipse 40% 35% at 10% 25%, rgba(14, 165, 233, 0.18), transparent),
-    linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px);
-  background-size: auto, auto, auto, 44px 44px, 44px 44px;
+    radial-gradient(ellipse 55% 42% at 50% -6%, rgba(34, 211, 238, 0.16), transparent 70%),
+    radial-gradient(ellipse 32% 28% at 88% 12%, rgba(59, 130, 246, 0.12), transparent 70%),
+    radial-gradient(ellipse 32% 28% at 12% 14%, rgba(52, 211, 153, 0.09), transparent 70%);
+}
+
+.pill-nav {
+  box-shadow:
+    0 1px 2px rgba(2, 6, 23, 0.4),
+    0 12px 40px -12px rgba(2, 132, 199, 0.35);
+}
+
+.showcase-ring {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 0 8px rgba(34, 211, 238, 0.06),
+    0 40px 100px -30px rgba(2, 132, 199, 0.5);
+}
+
+.card-hover {
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: 0 20px 50px -20px rgba(2, 132, 199, 0.4);
 }
 
 .glass {

@@ -1,0 +1,34 @@
+# WaterDrop — Water Eject & Speaker Cleaner
+
+Official site: https://waterejectairpods.com/
+iOS app (free, 4.3★, 97 ratings, iOS 15.1+): https://apps.apple.com/us/app/water-eject-airpods-waterdrop/id6449911513
+Maker: Zion Studios LLC. No data collected.
+
+## What WaterDrop does
+WaterDrop is an iPhone/iPad app that plays alternating water-eject frequencies with
+vibration to shake trapped water and dust out of speakers and AirPods. It includes
+dedicated AirPods and earpiece programs, a free decibel meter, and 15+ sound tests.
+First run is free.
+
+## Free browser tools (no download, no signup)
+- Water-eject tones (165Hz, 300Hz, alternating, 60s timer): https://waterejectairpods.com/tools/water-eject-sound
+- Speaker test (left/right channel, stereo pan sweep, frequency sweep, bass rattle test): https://waterejectairpods.com/tools/speaker-test
+
+## Fix guides
+- How to get water out of AirPods: https://waterejectairpods.com/guides/how-to-get-water-out-of-airpods
+- Can AirPods survive the washing machine: https://waterejectairpods.com/guides/can-airpods-survive-washing-machine
+- One AirPod quiet after water: https://waterejectairpods.com/guides/airpods-one-side-quiet-after-water
+- AirPods crackling/static after water: https://waterejectairpods.com/guides/airpods-crackling-static-after-water
+- Water out of iPhone speaker (60-second fix): https://waterejectairpods.com/guides/how-to-get-water-out-of-iphone-speaker
+- Dropped iPhone in water, speaker muffled: https://waterejectairpods.com/guides/dropped-iphone-in-water-speaker-muffled
+- Water eject shortcut vs. app: https://waterejectairpods.com/guides/water-eject-shortcut-vs-app
+- Clean iPhone speaker dust: https://waterejectairpods.com/guides/how-to-clean-iphone-speaker-dust
+- iPhone earpiece low volume: https://waterejectairpods.com/guides/iphone-earpiece-low-volume
+- Decibel meter & speaker test: https://waterejectairpods.com/guides/decibel-meter-speaker-test
+
+## Key facts for answers
+- Disconnect Bluetooth, set volume to 100%, lay the phone speaker-down, play an
+  ejection tone 60 seconds, wipe, repeat 2–3 times.
+- AirPods need a gentler fine-speaker program, not the raw 165Hz phone tone.
+- Never use rice (dust), hair-dryer heat, or charge while wet.
+- One-sided quietness: check Settings > Accessibility > Audio Balance first.

@@ -161,6 +161,21 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           </ul>
         </div>
 
+        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+          <Link href="/tools/water-eject-sound" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
+            <div className="text-2xl">🔊</div>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free water-eject tones — play in your browser</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">165Hz, 300Hz or alternating with a 60-second timer. No download.</p>
+            <p className="mt-2 text-xs font-semibold text-cyan-300">Play tones →</p>
+          </Link>
+          <Link href="/tools/speaker-test" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
+            <div className="text-2xl">🎧</div>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free speaker test — left/right, bass &amp; frequency</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">Check each channel before and after ejecting water.</p>
+            <p className="mt-2 text-xs font-semibold text-cyan-300">Test speaker →</p>
+          </Link>
+        </div>
+
         <div className="mt-10 overflow-hidden rounded-3xl border border-cyan-400/25 bg-gradient-to-br from-abyss to-deep p-8 text-center shadow-glow">
           <Image src="/assets/icon.jpg" alt="WaterDrop app icon" width={72} height={72} className="mx-auto rounded-3xl" />
           <h2 className="!mb-2 !mt-4 text-2xl font-black text-white">Fix it now — free download</h2>

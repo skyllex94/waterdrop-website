@@ -1,4 +1,4 @@
-export const SITE_URL = "https://watereject.netlify.app";
+export const SITE_URL = "https://waterejectairpods.com";
 export const APP_STORE_URL =
   "https://apps.apple.com/us/app/water-eject-airpods-waterdrop/id6449911513";
 
