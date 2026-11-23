@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { APP_STORE_URL, FAQS, GUIDES, SITE_URL } from "@/lib/site";
 import ToneDemo from "@/components/ToneDemo";
+import ReviewsCarousel from "@/components/ReviewsCarousel";
 import SiteHeader from "@/components/SiteHeader";
 
 function Stars() {
@@ -71,7 +72,7 @@ export default function Home() {
           { href: "#how", label: "How it works" },
           { href: "#reviews", label: "Reviews" },
           { href: "#screenshots", label: "Screenshots" },
-          { href: "#guides", label: "Guides" },
+          { href: "/guides", label: "Blog" },
           { href: "#faq", label: "FAQ" },
         ]}
       />
@@ -83,7 +84,7 @@ export default function Home() {
             <Stars />
           </div>
           <p className="mt-2 text-[13px] font-medium text-slate-400">
-            Loved by iPhone &amp; AirPods owners · <strong className="font-bold text-slate-200">4.3★ · 97 ratings</strong> · 4,300+ fixes
+            Loved by iPhone &amp; AirPods owners · <strong className="font-bold text-slate-200">4.3★ · 100 ratings</strong> · 4,300+ fixes
           </p>
           <h1 className="mx-auto mt-5 max-w-3xl text-[2.6rem] font-bold leading-[1.04] tracking-[-0.03em] sm:text-6xl md:text-[4.4rem]">
             From muffled speaker
@@ -98,10 +99,10 @@ export default function Home() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <AppStoreButton large />
             <Link
-              href="/tools/water-eject-sound"
-              className="inline-flex h-[60px] items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 text-[15px] font-semibold text-white backdrop-blur transition hover:border-cyan-400/50 hover:text-cyan-200"
+              href="/tools/remove-water"
+              className="inline-flex h-[60px] items-center gap-2 rounded-full bg-cyan-400 px-7 text-[15px] font-bold text-deep transition hover:-translate-y-0.5 hover:bg-cyan-300"
             >
-              🔊 Try free tones in browser
+              🌊 Remove water now
             </Link>
           </div>
           <p className="mt-5 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[13px] text-slate-400">
@@ -321,32 +322,26 @@ export default function Home() {
         <div className="text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">Real reviews</p>
           <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Washed AirPods, fixed.</h2>
-          <p className="mt-3 flex items-center justify-center gap-2 text-sm text-slate-400"><Stars /> <strong className="text-white">4.3/5</strong> from 97 App Store ratings</p>
+          <p className="mt-3 flex items-center justify-center gap-2 text-sm text-slate-400"><Stars /> <strong className="text-white">4.3/5</strong> from 100 App Store ratings · <Link href="/reviews" className="font-semibold text-cyan-300 underline decoration-cyan-400/30 underline-offset-4 hover:text-cyan-200">Read all reviews →</Link></p>
         </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {[
-            { n: "HANNNAHHH", t: "AirPods Pro sat in water for hours. Ran the app ~1hr, dried overnight — good as new. I was so skeptical. ♥️", s: "Lifesaver for my AirPods" },
-            { n: "NikiD81", t: "Accidentally washed my AirPods. Squealing every time. Ran water eject for AirPods ONE time — back to normal.", s: "Works like a charm!" },
-            { n: "Devikamohan", t: "Washer accident, high-pitched voice. Rice + silica gel failed. Other eject apps failed. This one's AirPods mode worked. Saved $250.", s: "Saved me $250" },
-          ].map((r) => (
-            <blockquote key={r.n} className="card-hover rounded-3xl border border-white/[0.08] bg-white/[0.03] p-7">
-              <Stars />
-              <p className="mt-3 font-bold text-white">“{r.s}”</p>
-              <p className="mt-2 text-sm leading-6 text-slate-400">“{r.t}”</p>
-              <footer className="mt-5 text-xs text-slate-500">— {r.n} · App Store review</footer>
-            </blockquote>
-          ))}
+        <div className="mt-10">
+          <ReviewsCarousel variant="home" />
         </div>
       </section>
 
-      {/* ── GUIDES ──────────────────────────── */}
+      {/* ── BLOG ──────────────────────────── */}
       <section id="guides" className="border-y border-white/[0.07] bg-white/[0.015]">
         <div className="mx-auto max-w-5xl px-4 py-20">
           <div className="text-center">
-            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">Fix guides</p>
+            <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-cyan-300">From the blog</p>
             <h2 className="mx-auto mt-3 max-w-xl text-3xl font-bold tracking-tight sm:text-4xl">
               Find your exact problem. Fix it now.
             </h2>
+            <p className="mt-3 text-sm text-slate-400">
+              <Link href="/guides" className="font-semibold text-cyan-300 underline decoration-cyan-400/30 underline-offset-4 hover:text-cyan-200">
+                View all posts on the blog →
+              </Link>
+            </p>
           </div>
           <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {GUIDES.map((g) => (
@@ -416,7 +411,7 @@ export default function Home() {
               <AppStoreButton large />
             </div>
             <p className="mt-4 text-xs text-slate-500">
-              Free download · iPhone &amp; iPad · iOS 15.1+ · 4.3★ (97 ratings)
+              Free download · iPhone &amp; iPad · iOS 15.1+ · 4.3★ (100 ratings)
             </p>
           </div>
         </div>
@@ -436,7 +431,7 @@ export default function Home() {
             <p className="mt-3 text-xs text-slate-600">Support: zionstudiosapps@gmail.com</p>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">Guides</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">Blog</p>
             <ul className="mt-4 space-y-2.5 text-sm text-slate-500">
               {GUIDES.slice(0, 4).map((g) => (
                 <li key={g.slug}><Link href={`/guides/${g.slug}`} className="hover:text-cyan-300">{g.shortTitle}</Link></li>
@@ -444,7 +439,7 @@ export default function Home() {
             </ul>
           </div>
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">More guides</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">More from the blog</p>
             <ul className="mt-4 space-y-2.5 text-sm text-slate-500">
               {GUIDES.slice(4).map((g) => (
                 <li key={g.slug}><Link href={`/guides/${g.slug}`} className="hover:text-cyan-300">{g.shortTitle}</Link></li>
@@ -455,11 +450,13 @@ export default function Home() {
             <p className="text-xs font-bold uppercase tracking-[0.14em] text-slate-400">App</p>
             <ul className="mt-4 space-y-2.5 text-sm text-slate-500">
               <li><a href={APP_STORE_URL} target="_blank" rel="noopener" className="hover:text-cyan-300">Download on App Store</a></li>
+              <li><Link href="/tools/remove-water" className="hover:text-cyan-300">Guided water removal (all devices)</Link></li>
               <li><Link href="/tools/water-eject-sound" className="hover:text-cyan-300">Free eject tones (play online)</Link></li>
               <li><Link href="/tools/speaker-test" className="hover:text-cyan-300">Free speaker test (left/right)</Link></li>
               <li><Link href="/tools/tone-generator" className="hover:text-cyan-300">Free tone generator (any Hz)</Link></li>
               <li><Link href="/tools/mic-test" className="hover:text-cyan-300">Free mic test (private)</Link></li>
               <li><Link href="/tools/decibel-meter" className="hover:text-cyan-300">Free decibel meter (dB)</Link></li>
+              <li><Link href="/reviews" className="hover:text-cyan-300">User reviews</Link></li>
               <li><a href="https://sites.google.com/view/water-clearance/privacy-policy" target="_blank" rel="noopener" className="hover:text-cyan-300">Privacy Policy</a></li>
               <li><a href="https://sites.google.com/view/water-clearance/terms-conditions" target="_blank" rel="noopener" className="hover:text-cyan-300">Terms of Use</a></li>
               <li><Link href={SITE_URL} className="hover:text-cyan-300">Home</Link></li>

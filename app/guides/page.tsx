@@ -4,7 +4,7 @@ import SiteHeader from "@/components/SiteHeader";
 import { APP_STORE_URL, GUIDES, SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Water Eject Guides: Fix iPhone Speaker & AirPods Water Damage",
+  title: "Blog: Water Eject Guides to Fix iPhone Speaker & AirPods Water Damage",
   description:
     "Every WaterDrop fix guide in one place — water in iPhone speakers, washed AirPods, liquid-detected ports, crackling, dust, and speaker tests. Free, step-by-step, no signup.",
   keywords: [
@@ -29,6 +29,7 @@ const CATEGORIES: { heading: string; blurb: string; slugs: string[] }[] = [
     heading: "AirPods rescue",
     blurb: "Washed, rained on, or sweaty buds — bring them back.",
     slugs: [
+      "3-ways-to-get-water-out-of-airpods",
       "how-to-get-water-out-of-airpods",
       "can-airpods-survive-washing-machine",
       "airpods-one-side-quiet-after-water",
@@ -70,7 +71,7 @@ const breadcrumbLd = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-    { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE_URL}/guides` },
+    { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/guides` },
   ],
 };
 
@@ -107,7 +108,7 @@ export default function GuidesIndexPage() {
         <div className="mx-auto max-w-3xl px-4 pt-12 text-center sm:pt-16">
           <nav className="text-xs text-slate-400" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-cyan-300">Home</Link> <span className="mx-1">/</span>
-            <span className="text-slate-200">Guides</span>
+            <span className="text-slate-200">Blog</span>
           </nav>
           <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-300">
             📚 The WaterDrop blog
@@ -209,7 +210,7 @@ export default function GuidesIndexPage() {
 
       <footer className="border-t border-white/[0.07]">
         <div className="mx-auto max-w-5xl px-4 py-8 text-center text-xs text-slate-600">
-          © {new Date().getFullYear()} Zion Studios LLC · <Link href="/" className="hover:text-cyan-300">WaterDrop</Link> · <Link href="/guides" className="hover:text-cyan-300">All guides</Link>
+          © {new Date().getFullYear()} Zion Studios LLC · <Link href="/" className="hover:text-cyan-300">WaterDrop</Link> · <Link href="/guides" className="hover:text-cyan-300">Blog</Link>
         </div>
       </footer>
     </main>

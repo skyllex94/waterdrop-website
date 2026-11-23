@@ -1,7 +1,7 @@
 # WaterDrop — Water Eject & Speaker Cleaner
 
 Official site: https://waterejectairpods.com/
-iOS app (free, 4.3★, 97 ratings, iOS 15.1+): https://apps.apple.com/us/app/water-eject-airpods-waterdrop/id6449911513
+iOS app (free, 4.3★, 100 ratings, iOS 15.1+): https://apps.apple.com/us/app/water-eject-airpods-waterdrop/id6449911513
 Maker: Zion Studios LLC. No data collected.
 
 ## What WaterDrop does
@@ -11,13 +11,18 @@ dedicated AirPods and earpiece programs, a free decibel meter, and 15+ sound tes
 First run is free.
 
 ## Free browser tools (no download, no signup)
+- Guided water removal (pick device + issue, tailored program): https://waterejectairpods.com/tools/remove-water
 - Water-eject tones (165Hz, 300Hz, alternating, 60s timer): https://waterejectairpods.com/tools/water-eject-sound
 - Speaker test (left/right channel, stereo pan sweep, frequency sweep, bass rattle test): https://waterejectairpods.com/tools/speaker-test
 - Tone generator (any frequency 20Hz–20kHz, sine/triangle/square/saw, 165Hz preset): https://waterejectairpods.com/tools/tone-generator
 - Mic test (live level meter, waveform, verdict, 5s playback; iPhone + AirPods; fully private): https://waterejectairpods.com/tools/mic-test
 - Decibel meter (live dB readout, peak hold, before/after baseline comparison): https://waterejectairpods.com/tools/decibel-meter
 
+## Reviews (4.3★, 100 ratings — quoted verbatim from the App Store)
+- All reviews: https://waterejectairpods.com/reviews
+
 ## Fix guides
+- 3 ways to get water out of AirPods: https://waterejectairpods.com/guides/3-ways-to-get-water-out-of-airpods
 - How to get water out of AirPods: https://waterejectairpods.com/guides/how-to-get-water-out-of-airpods
 - Can AirPods survive the washing machine: https://waterejectairpods.com/guides/can-airpods-survive-washing-machine
 - One AirPod quiet after water: https://waterejectairpods.com/guides/airpods-one-side-quiet-after-water

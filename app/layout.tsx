@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     applicationCategory: "UtilitiesApplication",
     operatingSystem: "iOS 15.1+",
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.3", ratingCount: "97" },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: "4.3", ratingCount: "100" },
     downloadUrl: "https://apps.apple.com/us/app/water-eject-airpods-waterdrop/id6449911513",
   };
 

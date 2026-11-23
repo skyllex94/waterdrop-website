@@ -98,7 +98,7 @@ export default function WaterEjectSoundPage() {
 
       <SiteHeader
         links={[
-          { href: "/guides", label: "All guides" },
+          { href: "/guides", label: "Blog" },
           { href: "/guides/how-to-get-water-out-of-airpods", label: "AirPods fix" },
           { href: "/guides/how-to-get-water-out-of-iphone-speaker", label: "iPhone fix" },
         ]}

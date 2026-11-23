@@ -87,7 +87,7 @@ export default function SpeakerTestPage() {
 
       <SiteHeader
         links={[
-          { href: "/guides", label: "All guides" },
+          { href: "/guides", label: "Blog" },
           { href: "/tools/water-eject-sound", label: "Water eject tones" },
           { href: "/guides/airpods-one-side-quiet-after-water", label: "One AirPod quiet?" },
           { href: "/guides/how-to-get-water-out-of-iphone-speaker", label: "iPhone fix" },

@@ -7,6 +7,7 @@ import { GUIDE_CONTENT } from "@/lib/guides-content";
 import ReadingProgress from "@/components/ReadingProgress";
 import AppleMark from "@/components/AppleMark";
 import SiteHeader from "@/components/SiteHeader";
+import WaterRemovalWizard from "@/components/WaterRemovalWizard";
 
 const GUIDE_UPDATED = "2026-09-11";
 
@@ -75,7 +76,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
-      { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE_URL}/guides` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/guides` },
       { "@type": "ListItem", position: 3, name: g.shortTitle, item: `${SITE_URL}/guides/${g.slug}` },
     ],
   };
@@ -90,7 +91,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
 
       <SiteHeader
         links={[
-          { href: "/guides", label: "All guides" },
+          { href: "/guides", label: "Blog" },
           { href: "/tools/water-eject-sound", label: "Free tones" },
           { href: "/guides/how-to-get-water-out-of-airpods", label: "AirPods fix" },
           { href: "/guides/how-to-get-water-out-of-iphone-speaker", label: "iPhone fix" },
@@ -100,7 +101,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       <article className="mx-auto max-w-3xl px-4 pb-20 pt-10">
         <nav className="text-xs text-slate-400">
           <Link href="/" className="hover:text-cyan-300">Home</Link> <span className="mx-1">/</span>
-          <Link href="/guides" className="hover:text-cyan-300">Guides</Link> <span className="mx-1">/</span>
+          <Link href="/guides" className="hover:text-cyan-300">Blog</Link> <span className="mx-1">/</span>
           <span className="text-slate-200">{g.shortTitle}</span>
         </nav>
         <p className="mt-4 text-xs text-slate-500">
@@ -141,6 +142,29 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
             ))}
           </ol>
 
+          {g.slug === "3-ways-to-get-water-out-of-airpods" && (
+            <div className="not-prose mt-8">
+              <div className="rounded-3xl border border-cyan-400/30 bg-cyan-400/[0.04] p-4 sm:p-6">
+                <p className="text-center text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">
+                  Try it right here — Way 2
+                </p>
+                <p className="mx-auto mt-1 max-w-md text-center text-[13px] leading-6 text-slate-400">
+                  AirPods already wiped down? Run the eject program below without leaving this post.
+                  It&apos;s pre-set to AirPods — just pick what happened and hit start.
+                </p>
+                <div className="mt-4">
+                  <WaterRemovalWizard initialDevice="airpods" />
+                </div>
+                <p className="mt-3 text-center text-xs text-slate-500">
+                  Prefer manual tones?{" "}
+                  <Link href="/tools/water-eject-sound" className="font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200">
+                    Open the free tone player →
+                  </Link>
+                </p>
+              </div>
+            </div>
+          )}
+
           {g.sections.map((s) => (
             <div key={s.heading}>
               <h2>{s.heading}</h2>
@@ -162,6 +186,12 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         </div>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <Link href="/tools/remove-water" className="group rounded-2xl border border-cyan-400/30 bg-cyan-400/[0.06] p-5 transition hover:border-cyan-400/60">
+            <div className="text-2xl">🌊</div>
+            <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Guided water removal — pick device + issue</p>
+            <p className="mt-1 text-xs leading-5 text-slate-400">Tailored eject program. Start here.</p>
+            <p className="mt-2 text-xs font-semibold text-cyan-300">Remove water →</p>
+          </Link>
           <Link href="/tools/water-eject-sound" className="group rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-cyan-400/50">
             <div className="text-2xl">🔊</div>
             <p className="mt-2 text-sm font-bold leading-snug text-white group-hover:text-cyan-200">Free water-eject tones</p>

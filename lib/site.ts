@@ -5,7 +5,7 @@ export const APP_STORE_URL =
 export const APP_META = {
   name: "WaterDrop — Water Eject & Speaker Cleaner",
   rating: "4.3",
-  ratingCount: "97",
+  ratingCount: "100",
   price: "Free",
 };
 
@@ -20,6 +20,16 @@ export type GuideCard = {
 };
 
 export const GUIDES: GuideCard[] = [
+  {
+    slug: "3-ways-to-get-water-out-of-airpods",
+    title: "3 Ways to Get Water Out of AirPods (Safe + Actually Works)",
+    shortTitle: "3 ways to dry AirPods",
+    description:
+      "Water in your AirPods? These are the 3 safe ways that actually work — quick dry-out, sound ejection, and the test-and-wait check — plus which free tools to use for each step.",
+    keyword: "ways to get water out of airpods",
+    readMinutes: 6,
+    emoji: "💦",
+  },
   {
     slug: "how-to-get-water-out-of-airpods",
     title: "How to Get Water Out of AirPods: Water Eject Fix That Works (2026)",

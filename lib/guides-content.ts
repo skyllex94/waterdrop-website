@@ -522,4 +522,47 @@ export const GUIDE_CONTENT: Record<string, GuideFull> = {
       { heading: "Salt water, pool, and sweat: the residue problem", body: ["Fresh-water splashes evaporate clean. Salt, chlorine, sweat, and sugary drinks leave conductive, corrosive residue after the water itself is gone — which is why 'dry but still alerting' is so common after beach or gym exposure. These cases need the full 24-hour dry plus the cable-isolation test, and corrosion that has already formed won't wash out at home. If a beach-dunked port alerts for days, book service and say 'salt water' upfront — techs triage it differently."] },
     ],
   },
+
+  "3-ways-to-get-water-out-of-airpods": {
+    slug: "3-ways-to-get-water-out-of-airpods",
+    title: "3 Ways to Get Water Out of AirPods (Safe + Actually Works)",
+    shortTitle: "3 ways to dry AirPods",
+    description:
+      "Water in your AirPods? These are the 3 safe ways that actually work — quick dry-out, sound ejection, and the test-and-wait check — plus which free tools to use for each step.",
+    keyword: "ways to get water out of airpods",
+    readMinutes: 6,
+    emoji: "💦",
+    intro: [
+      "Rain, sweat, sink, or a full trip through the wash — wet AirPods usually sound muffled, squeaky, or lopsided for a while. The good news: if they still power on and pair, the problem is almost always water sitting on the acoustic mesh, not a dead driver.",
+      "You only need three moves, in order: dry everything properly first, then shake the last moisture loose with sound, then test and give them time before you decide anything is broken. Do them in that order — sound on a soaking-wet bud and charging a wet bud are the two mistakes that turn a rescue into a replacement.",
+    ],
+    steps: [
+      { title: "Way 1 — Dry them out properly (10 minutes + overnight)", detail: "Pull AirPods Pro tips off (water hides under the silicone), wipe buds, mesh, vents and charging contacts with a soft dry lint-free cloth, tap each bud mesh-down gently against your hand, then leave buds OUT of the open, upside-down case in airflow overnight. Silica gel nearby helps; rice, hair dryers, radiators and compressed air do not — they add dust, melt seals, or push water deeper." },
+      { title: "Way 2 — Shake the rest loose with sound (5 minutes)", detail: "Once surface water is gone, connect the buds, set phone volume to max, and run a fine-speaker water-eject program in 2–3 short cycles, wiping the mesh between runs. Vibration walks droplets out of the tiny mesh that cloths can't reach. Use an AirPods-tuned tone, not a blunt iPhone-speaker blast." },
+      { title: "Way 3 — Test, wait, then decide (3 minutes + 24 hours)", detail: "Play the same familiar track to compare left vs. right, run a stereo left/right check and a quick mic/voice check, and note the result. Clearly better but not perfect means dry another night and run one more eject session. Zero sound, no charging, or no pairing after 48 dry hours means book Apple Support instead of running more tones." },
+    ],
+    waterdrop: [
+      { title: "Guided start: Remove Water tool", detail: "Answer device + what happened and get a tuned program picked for you — no guessing which frequency. Start here in your browser if you just want the right run." },
+      { title: "Manual control: Water Eject Tones + Tone Generator", detail: "Play 165Hz, 300Hz, or an alternating sweep with a built-in timer, or dial any frequency 20Hz–20kHz yourself. Max volume, buds connected, short cycles, wipe between runs." },
+      { title: "Proof it worked: Speaker Test + Mic Test + Decibel Meter", detail: "Score left vs. right separately with stereo and frequency sweeps, check calls with a private mic test, and log a before/after dB number from the same distance. Numbers beat vibes-guessing." },
+    ],
+    tips: [
+      "Keep wet buds OUT of the case until bone dry — wet pins plus charging current corrodes the contacts.",
+      "Never charge to test — a dead-feeling bud after a soak is often just a flat battery plus moisture, not a dead bud.",
+      "Don't wear buds at max volume during ejection — hold them or set them mesh-down on a cloth.",
+      "Sweat and wash detergent leave residue, so plan a second short session after the overnight dry.",
+      "Gym pairs: wipe after workouts and run a monthly 60-second maintenance eject.",
+    ],
+    faqs: [
+      { q: "What is the fastest safe way to get water out of AirPods?", a: "Wipe with a lint-free cloth, tap mesh-down, leave out of the case in airflow, then run 2–3 short AirPods-tuned eject cycles at max volume. Most rain or sweat cases clear in one session plus overnight drying." },
+      { q: "Can I use rice to dry AirPods?", a: "Skip it. Rice dust settles into the mesh and charging wells. Airflow plus silica gel packets dries faster and cleaner." },
+      { q: "Should I put wet AirPods in the charging case?", a: "No — not until fully dry. The case is not water-resistant, it traps moisture against the buds, and wet charging contacts corrode. Dry buds and case separately, case open and upside down." },
+      { q: "Why is one AirPod quiet after water?", a: "Water rarely hits both buds evenly. Check balance is centered first, then run extra focused cycles on the quiet bud and compare with a left/right stereo test." },
+    ],
+    sections: [
+      { heading: "Way 1 in detail: the dry-out that saves them", body: ["Pop Pro tips off and dry both halves — the cup under the tip is the most-missed puddle. Wipe the speaker mesh, mic vents, and silver charging contacts. If the case got wet too, dab the wells carefully without pressing the pins, then leave the case open and upside down. Park everything mesh-down in a dry, airy room overnight, lid open. Two hours is the minimum before re-use; a full night is what actually saves washed buds. No heat, no compressed air, no sharp tools."] },
+      { heading: "Way 2 in detail: sound ejection without hurting drivers", body: ["Sound works once bulk water is gone. Connect the buds, max the phone volume, disconnect other Bluetooth speakers so audio actually routes to the AirPods, and play an AirPods-tuned sweep — alternating low frequencies with pauses work better than one flat blast. Run a cycle, wipe, repeat 2–3 times. Squealing that fades mid-run is a great sign: that is the mesh clearing and the feedback mics settling. If the tone plays through the phone speaker instead, re-check Bluetooth routing and run it again."] },
+      { heading: "Way 3 in detail: prove it and know when to stop", body: ["Test with the same songs at the same volume: one bassy, one vocal, one bright. Then run a left/right balance check to score each bud separately, plus a quick mic check if calls hiss — mic vents dry slower than drivers. Improving day over day means keep drying. Flat silence, rattling at low volume when bone dry, no charge light, or no pairing after 48 dry hours plus proper cycles means hardware, not moisture — take your timeline to Apple and ask about single-bud replacement before buying a whole new pair."] },
+    ],
+  },
 };

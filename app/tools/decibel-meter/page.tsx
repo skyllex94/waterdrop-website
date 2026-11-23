@@ -85,7 +85,7 @@ export default function DecibelMeterPage() {
 
       <SiteHeader
         links={[
-          { href: "/guides", label: "All guides" },
+          { href: "/guides", label: "Blog" },
           { href: "/tools/water-eject-sound", label: "Water eject tones" },
           { href: "/tools/speaker-test", label: "Speaker test" },
         ]}
