@@ -183,6 +183,29 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           <ul>
             {g.tips.map((t) => <li key={t}>{t}</li>)}
           </ul>
+
+          {g.slug === "how-to-create-water-eject-shortcut" && (
+            <div className="not-prose mt-8">
+              <div className="rounded-3xl border border-cyan-400/30 bg-cyan-400/[0.04] p-4 sm:p-6">
+                <p className="text-center text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">
+                  Skip the setup — run it right here
+                </p>
+                <p className="mx-auto mt-1 max-w-md text-center text-[13px] leading-6 text-slate-400">
+                  No shortcut maintenance, no iOS breakage. Pick your device and run the full guided
+                  water-clearance program below — same physics, zero setup.
+                </p>
+                <div className="mt-4">
+                  <WaterRemovalWizard initialDevice="iphone" />
+                </div>
+                <p className="mt-3 text-center text-xs text-slate-500">
+                  And for stubborn water, the free app adds alternating frequencies + haptic vibration.{" "}
+                  <Link href="/tools/water-eject-sound" className="font-semibold text-cyan-300 underline underline-offset-4 hover:text-cyan-200">
+                    Or open the free tone player →
+                  </Link>
+                </p>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

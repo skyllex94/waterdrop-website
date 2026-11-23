@@ -560,9 +560,54 @@ export const GUIDE_CONTENT: Record<string, GuideFull> = {
       { q: "Why is one AirPod quiet after water?", a: "Water rarely hits both buds evenly. Check balance is centered first, then run extra focused cycles on the quiet bud and compare with a left/right stereo test." },
     ],
     sections: [
-      { heading: "Way 1 in detail: the dry-out that saves them", body: ["Pop Pro tips off and dry both halves — the cup under the tip is the most-missed puddle. Wipe the speaker mesh, mic vents, and silver charging contacts. If the case got wet too, dab the wells carefully without pressing the pins, then leave the case open and upside down. Park everything mesh-down in a dry, airy room overnight, lid open. Two hours is the minimum before re-use; a full night is what actually saves washed buds. No heat, no compressed air, no sharp tools."] },
+      { heading: "Way 1 in detail: the dry-out that saves them", body: ["Pop Pro tips off and dry both halves — the cup under the tip is the most-missed puddle. Wipe the speaker mesh, mic vents, and silver charging contacts. If the case got wet too, dab the wells carefully without pressing the pins, then leave the case open and upside down. Park everything mesh-down in a dry, airy room, lid open. Two hours is the minimum before re-use; a full night is what actually saves washed buds. No heat, no compressed air, no sharp tools."] },
       { heading: "Way 2 in detail: sound ejection without hurting drivers", body: ["Sound works once bulk water is gone. Connect the buds, max the phone volume, disconnect other Bluetooth speakers so audio actually routes to the AirPods, and play an AirPods-tuned sweep — alternating low frequencies with pauses work better than one flat blast. Run a cycle, wipe, repeat 2–3 times. Squealing that fades mid-run is a great sign: that is the mesh clearing and the feedback mics settling. If the tone plays through the phone speaker instead, re-check Bluetooth routing and run it again."] },
       { heading: "Way 3 in detail: prove it and know when to stop", body: ["Test with the same songs at the same volume: one bassy, one vocal, one bright. Then run a left/right balance check to score each bud separately, plus a quick mic check if calls hiss — mic vents dry slower than drivers. Improving day over day means keep drying. Flat silence, rattling at low volume when bone dry, no charge light, or no pairing after 48 dry hours plus proper cycles means hardware, not moisture — take your timeline to Apple and ask about single-bud replacement before buying a whole new pair."] },
+    ],
+  },
+
+  "how-to-create-water-eject-shortcut": {
+    slug: "how-to-create-water-eject-shortcut",
+    title: "How to Create a Water Eject Shortcut on iPhone (Step-by-Step)",
+    shortTitle: "Create eject shortcut",
+    description:
+      "Want a Water Eject shortcut on your iPhone? Build it in the Shortcuts app step-by-step — volume, tone, Home Screen + Siri — plus when to skip it and use the app instead.",
+    keyword: "how to create water eject shortcut",
+    readMinutes: 6,
+    emoji: "🛠️",
+    intro: [
+      "A Water Eject shortcut is just an iPhone Shortcut that sets your volume to max and plays a low ejection tone through the speaker. It costs nothing, lives in the Shortcuts app, and can run from Siri or a Home Screen button — handy for a light splash.",
+      "Two honest caveats before you build: the Shortcuts app cannot synthesize a custom tone by itself, so a fully manual build is always a simple single-tone version. And shortcuts break more often than apps — iOS updates, Bluetooth routing, and copycat links are the usual culprits. This guide gives you both paths: the 2-minute trusted install and the manual build, then the setup that makes either one actually work.",
+    ],
+    steps: [
+      { title: "Open Shortcuts and start fresh", detail: "Open Apple's Shortcuts app (install it from the App Store if you deleted it). Tap the + button to create a new shortcut and rename it something unmistakable like Water Eject Now — Siri mishears generic names constantly." },
+      { title: "Add Set Volume to 100%", detail: "Tap Add Action, search Volume, and add Set Volume to 100%. This is the step most broken shortcuts skip — without it the tone plays quietly and moves no water. Keep Show Volume off so it runs cleanly." },
+      { title: "Add the tone (pick your path)", detail: "Easy path: install a well-known Water Eject shortcut from a trusted gallery like RoutineHub or ShortcutsGallery in Safari, tap Add Shortcut, and skip to step 4. Manual path: download a 165Hz ejection tone audio file, then Add Action > Play Sound and pick that file, followed by Repeat 3 times. Manual builds only play one fixed tone — fine for light splashes, weaker on soaked speakers." },
+      { title: "Put it where you can reach it", detail: "Tap the info button, choose Add to Home Screen for a one-tap button, and turn on Show in Share Sheet. Then say the exact name to Siri once (Hey Siri, Water Eject Now) and allow Run When Locked when prompted — otherwise Siri refuses from a locked phone." },
+      { title: "Run it the right way", detail: "Disconnect Bluetooth so sound comes from the phone speaker, turn Silent off, lay the phone speaker-down on a cloth, run the shortcut, wipe the grille, and repeat 2–3 times. Test with the same song before and after — or run a left/right speaker test to check objectively." },
+    ],
+    waterdrop: [
+      { title: "When the shortcut is enough", detail: "Light rain or a small splash on the main speaker, cleared in 1–2 runs — keep the shortcut and move on. That is exactly what single-tone shortcuts are good at." },
+      { title: "When the app wins", detail: "AirPods, earpiece calls, dust, pool or wash residue, or muffle that keeps coming back need alternating frequencies with vibration, per-speaker programs, and before/after tests. The free WaterDrop program covers all three in one tap." },
+      { title: "No setup option", detail: "Do not want to maintain a shortcut through every iOS update? The guided water-removal tool below picks the right program for your device with no install, and the free tone player gives you 165Hz, 300Hz, and alternating sweeps on demand." },
+    ],
+    tips: [
+      "Only install shortcuts from links you trust — deny any shortcut that asks for website, contacts, or location access.",
+      "If Siri says it can't find the shortcut, rename it to something distinct and run it once manually from the Shortcuts app first.",
+      "After every major iOS update, re-check Settings > Shortcuts > Allow Untrusted Shortcuts and re-run the shortcut once.",
+      "No sound at all usually means Bluetooth stole the audio — disconnect earbuds, cars, and watches, then retry.",
+      "Film the grille in slow motion during ejection: visible droplets mean sound is reaching the mesh.",
+    ],
+    faqs: [
+      { q: "How do I add the Water Eject shortcut to my Home Screen?", a: "Open the shortcut's details, tap Add to Home Screen, pick an icon, and tap Add. You get a one-tap button that runs the eject without opening the Shortcuts app." },
+      { q: "Why is my Water Eject shortcut so quiet?", a: "Volume capped, Silent switch on, or Bluetooth routing the tone to earbuds instead of the phone speaker. Max the volume in the shortcut itself, disconnect Bluetooth, flip Silent off, and re-run." },
+      { q: "Why won't Siri run my Water Eject shortcut?", a: "Siri fails on names it mishears or shortcuts not synced. Use a distinct name, run it once manually, and enable Allow When Locked plus Show in Share Sheet." },
+      { q: "Is the Water Eject shortcut safe?", a: "A genuine shortcut only sets volume and plays a tone — safe. But copycat links exist. Install from known galleries only, deny website-access prompts, and never pay for a shortcut — real eject apps live on the App Store." },
+    ],
+    sections: [
+      { heading: "Trusted install vs. manual build", body: ["Trusted install takes two minutes: open the gallery link in Safari, tap Get Shortcut, tap Add Shortcut, done. You get the community-maintained version with volume handling built in. Manual build takes longer and only produces a single fixed tone: Set Volume to 100%, Play Sound with a downloaded 165Hz file, Repeat. Pick trusted install unless you specifically want a shortcut you built yourself."] },
+      { heading: "Siri + Home Screen setup that sticks", body: ["Name it distinctly (Water Eject Now beats Water Eject), run it once by tapping it inside Shortcuts, then add the Home Screen button and the Siri phrase. In the shortcut's settings enable Show in Share Sheet and Allow When Locked. If it vanishes after an update, re-add from the same source page rather than debugging the old copy."] },
+      { heading: "When to skip the shortcut entirely", body: ["AirPods or earpiece muffle, dust-clogged mesh, pool or detergent residue, or a shortcut that changed nothing after proper runs — all point past single-tone shortcuts. Run the guided water-removal tool below (no setup, tailored program per device) or grab the free app for alternating frequencies with vibration plus a decibel meter and 15+ tests to prove the fix."] },
     ],
   },
 };

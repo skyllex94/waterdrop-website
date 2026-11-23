@@ -101,6 +101,16 @@ export const GUIDES: GuideCard[] = [
     emoji: "📲",
   },
   {
+    slug: "how-to-create-water-eject-shortcut",
+    title: "How to Create a Water Eject Shortcut on iPhone (Step-by-Step)",
+    shortTitle: "Create eject shortcut",
+    description:
+      "Want a Water Eject shortcut on your iPhone? Build it in the Shortcuts app step-by-step — volume, tone, Home Screen + Siri — plus when to skip it and use the app instead.",
+    keyword: "how to create water eject shortcut",
+    readMinutes: 6,
+    emoji: "🛠️",
+  },
+  {
     slug: "how-to-clean-iphone-speaker-dust",
     title: "How to Clean iPhone Speaker Dust & Lint (Fix Low Volume)",
     shortTitle: "Clean speaker dust",

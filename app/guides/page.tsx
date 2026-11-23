@@ -50,9 +50,10 @@ const CATEGORIES: { heading: string; blurb: string; slugs: string[] }[] = [
     heading: "Clean, test & compare",
     blurb: "Dust, earpieces, shortcuts, and proof your fix worked.",
     slugs: [
+      "how-to-create-water-eject-shortcut",
+      "water-eject-shortcut-vs-app",
       "how-to-clean-iphone-speaker-dust",
       "iphone-earpiece-low-volume",
-      "water-eject-shortcut-vs-app",
       "decibel-meter-speaker-test",
     ],
   },
